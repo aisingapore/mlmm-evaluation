@@ -76,7 +76,8 @@ class HuggingFaceAutoLM(BaseLM):
             max_gen_toks: Optional[int] = 256,
             max_length: Optional[int] = None,
             add_special_tokens: Optional[bool] = None,
-            use_accelerate: Optional[bool] = False,
+            ## WT: Force to True
+            use_accelerate: Optional[bool] = True,
             device_map_option: Optional[str] = "auto",
             max_memory_per_gpu: Optional[Union[int, str]] = None,
             max_cpu_memory: Optional[Union[int, str]] = None,
@@ -85,7 +86,8 @@ class HuggingFaceAutoLM(BaseLM):
             device: Optional[Union[int, str]] = "cuda",
             peft: str = None,
             load_in_8bit: Optional[bool] = False,
-            trust_remote_code: Optional[bool] = False,
+            ## WT: Force to True
+            trust_remote_code: Optional[bool] = True,
     ):
         """Initializes a HuggingFace `AutoModel` and `AutoTokenizer` for evaluation.
         Args:
@@ -286,6 +288,7 @@ class HuggingFaceAutoLM(BaseLM):
         tokenizer = self.AUTO_TOKENIZER_CLASS.from_pretrained(
             pretrained if tokenizer is None else tokenizer,
             revision=revision + ("/" + subfolder if subfolder is not None else ""),
+            trust_remote_code=True,
         )
         tokenizer.add_special_tokens({"eos_token": '</s>'})
         tokenizer.add_special_tokens({"pad_token": '</s>'})

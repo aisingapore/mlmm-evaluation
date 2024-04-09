@@ -1,0 +1,37 @@
+{
+  "results": {
+    "arc_id": {
+      "acc": 0.24615384615384617,
+      "acc_stderr": 0.012599038966211845,
+      "acc_norm": 0.3017094017094017,
+      "acc_norm_stderr": 0.013424720842862012
+    },
+    "hellaswag_id": {
+      "acc": 0.3739531887481211,
+      "acc_stderr": 0.00501380250361769,
+      "acc_norm": 0.46177796864934506,
+      "acc_norm_stderr": 0.0051659778354740974
+    },
+    "mmlu_id": {
+      "acc": 0.261506755209526,
+      "acc_stderr": 0.003839538897543392,
+      "acc_norm": 0.28295549958018473,
+      "acc_norm_stderr": 0.0039354688250692015
+    }
+  },
+  "versions": {
+    "arc_id": 0,
+    "hellaswag_id": 1,
+    "mmlu_id": 0
+  },
+  "config": {
+    "model": "hf-auto",
+    "model_args": "pretrained=/data/projects/11003281/.cache/models--aisingapore--sealion7b/snapshots/11cc4274ab12322435890b20b8de64511e1885f1/,trust_remote_code=True,use_accelerate=True",
+    "batch_size": 1,
+    "device": "cuda",
+    "no_cache": true,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "description_dict": {}
+  }
+}

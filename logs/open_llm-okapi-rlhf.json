@@ -1,0 +1,37 @@
+{
+  "results": {
+    "arc_ta": {
+      "acc": 0.22854640980735552,
+      "acc_stderr": 0.012430805800146312,
+      "acc_norm": 0.2591943957968476,
+      "acc_norm_stderr": 0.012972453150426565
+    },
+    "hellaswag_ta": {
+      "acc": 0.2552002852727921,
+      "acc_stderr": 0.004753469334788171,
+      "acc_norm": 0.28515392844407467,
+      "acc_norm_stderr": 0.004922620035065554
+    },
+    "mmlu_ta": {
+      "acc": 0.28976635916889387,
+      "acc_stderr": 0.0042124334175999865,
+      "acc_norm": 0.2922665747047159,
+      "acc_norm_stderr": 0.004223114692712449
+    }
+  },
+  "versions": {
+    "arc_ta": 0,
+    "hellaswag_ta": 1,
+    "mmlu_ta": 0
+  },
+  "config": {
+    "model": "hf-auto",
+    "model_args": "pretrained=/data/projects/11003281/.cache/huggingface/hub/models--Qwen--Qwen1.5-7B-Chat/snapshots/a2662f4bc1afe913a91cd49f794d229a8c28f97e,trust_remote_code=True,use_accelerate=True",
+    "batch_size": 1,
+    "device": "cuda",
+    "no_cache": true,
+    "limit": null,
+    "bootstrap_iters": 100000,
+    "description_dict": {}
+  }
+}
